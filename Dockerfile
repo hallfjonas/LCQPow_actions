@@ -1,7 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt-get install -y && \
-    git \
+RUN apt-get install -y git \
     build-essentials \
     cmake \
     libeigen3-dev \
