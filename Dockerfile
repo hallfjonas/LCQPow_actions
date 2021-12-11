@@ -14,10 +14,10 @@ RUN wget http://www.cmake.org/files/v3.13/cmake-3.13.0.tar.gz
 RUN tar xf cmake-3.13.0.tar.gz
 RUN cd cmake-3.13.0; ./configure; make; make install
 
-# Clone the Project repo
+# Clone the project repo
+RUN echo "HELLO"
 RUN git clone https://github.com/hallfjonas/LCQPow.git /LCQPow
 WORKDIR /LCQPow
 RUN git submodule update --init --recursive
 
-# Set the build script as entrypoint
-ENTRYPOINT [ "/LCQPow/test.sh" ]
+RUN sh test.sh
