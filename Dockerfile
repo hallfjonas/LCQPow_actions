@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y \
     libeigen3-dev \
     python3-dev
 
-RUN git clone https://github.com/hallfjonas/LCQPow.git
-RUN cd LCQPow
+RUN git clone https://github.com/hallfjonas/LCQPow.git /LCQPow
+WORKDIR /LCQPow
 RUN git submodule update --init --recursive
 
 ENTRYPOINT [ "build.sh" ]
