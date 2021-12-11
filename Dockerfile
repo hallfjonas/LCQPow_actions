@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y \
     git \
-    build-essentials \
+    build-essential \
     cmake \
     libeigen3-dev \
     python3-dev \
